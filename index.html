@@ -259,7 +259,7 @@
       width: 100%;
       border-collapse: collapse;
       margin: 6px 0;
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       background: rgba(0, 0, 0, 0.22);
       border-radius: 6px;
       overflow: hidden;
@@ -400,16 +400,17 @@
     <!-- 四大核心欄位：嚴格對應實體黑板四大區塊 -->
     <div class="board-grid">
 
-      <!-- 欄位一（左板）：一元酸及其鹽 -->
+      <!-- 欄位一（左板）：一元酸及其鹽（完整比照三系統與視角對照表） -->
       <div class="col-card">
         <div class="col-title">
           <span>一、一元酸及其鹽</span>
           <span style="font-size:0.75rem; opacity:0.8;">共軛酸鹼對與中和對照</span>
         </div>
 
+        <!-- 1. HCl 系統 -->
         <div class="section-box">
-          <div class="sub-head">1. 視角對照表（HCl 系統）</div>
-          <table class="role-table" style="font-size:0.75rem; margin:4px 0;">
+          <div class="sub-head">1. 視角對照表 (HCl 系統)</div>
+          <table class="role-table">
             <tr style="background:rgba(0,0,0,0.4);">
               <th>比較維度</th>
               <th>從共軛酸鹼對來看</th>
@@ -432,23 +433,91 @@
             </tr>
             <tr>
               <td><b>副詞</b></td>
-              <td>超強酸性 ➔ 超弱鹼性</td>
+              <td>超強酸性 ➔ 超弱鹼性<br><span style="color:var(--chalk-yellow);">pH約 7</span></td>
               <td>pH約 7</td>
             </tr>
           </table>
+          <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
+            • ① Cl<sup>-</sup> 是 HCl 被酸鹼中和後的半產物，稱為鹽（如氯鹽）。<br>
+            • ② Cl<sup>-</sup> 也是 HCl 的共軛鹼。因 HCl 酸性很強，故 Cl<sup>-</sup> 鹼性極弱。<br>
+            <b style="color:var(--chalk-yellow);">由①、②得：</b>Cl<sup>-</sup> 所形成的鹽類，水中鹼性忽略，呈中性。
+          </div>
         </div>
 
-        <div class="reaction-box" style="border-left: 3px solid var(--chalk-orange);">
-          <div class="sub-head" style="color:var(--chalk-orange);">2. 觀念說明</div>
-          <div style="font-size:0.78rem; line-height:1.5;">
-            • <b>①</b> Cl<sup>-</sup> 是 HCl 被酸鹼中和後的半產物，也可以稱為鹽，例如氯鹽。<br>
-            • <b>②</b> Cl<sup>-</sup> 也是 HCl 的共軛鹼。只是因為 HCl 酸性很強，所以 Cl<sup>-</sup> 鹼性很弱。<br>
-            <span style="color:var(--chalk-yellow); font-weight:bold;">由①、②得：</span>Cl<sup>-</sup> 所形成的鹽類，在水中鹼性幾乎可以忽略，故呈中性。
+        <!-- 2. HF 系統 -->
+        <div class="section-box" style="border-left-color: var(--chalk-cyan);">
+          <div class="sub-head" style="color:var(--chalk-cyan);">2. 視角對照表 (HF 系統)</div>
+          <table class="role-table">
+            <tr style="background:rgba(0,0,0,0.4);">
+              <th>比較維度</th>
+              <th>從共軛酸鹼對來看</th>
+              <th>從酸鹼中和來看</th>
+            </tr>
+            <tr>
+              <td><b>反應式</b></td>
+              <td>HF ➔ F<sup>-</sup><br>F<sup>-</sup>+H<sub>2</sub>O⇌HF+OH<sup>-</sup></td>
+              <td>HF ➔ F<sup>-</sup></td>
+            </tr>
+            <tr>
+              <td><b>名詞</b></td>
+              <td>酸 ➔ 共軛鹼(鹽)</td>
+              <td>酸 ➔ 鹽</td>
+            </tr>
+            <tr>
+              <td><b>形容詞</b></td>
+              <td>弱酸性 ➔ 強鹼性</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td><b>副詞</b></td>
+              <td>多弱酸性 ➔ 強鹼性<br><span style="color:var(--chalk-yellow);">pH &gt; 7</span></td>
+              <td>pH &gt; 7 (水解)</td>
+            </tr>
+          </table>
+          <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
+            • F<sup>-</sup> 發生水解：F<sup>-</sup> + H<sub>2</sub>O ⇌ HF + OH<sup>-</sup>。<br>
+            • 故弱酸強鹼鹽（如 NaF）水溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。
+          </div>
+        </div>
+
+        <!-- 3. CH3COOH 系統 -->
+        <div class="section-box" style="border-left-color: var(--chalk-green);">
+          <div class="sub-head" style="color:var(--chalk-green);">3. 視角對照表 (CH<sub>3</sub>COOH 系統)</div>
+          <table class="role-table">
+            <tr style="background:rgba(0,0,0,0.4);">
+              <th>比較維度</th>
+              <th>從共軛酸鹼對來看</th>
+              <th>從酸鹼中和來看</th>
+            </tr>
+            <tr>
+              <td><b>反應式</b></td>
+              <td>CH<sub>3</sub>COOH ➔ CH<sub>3</sub>COO<sup>-</sup></td>
+              <td>CH<sub>3</sub>COOH ➔ 鹽</td>
+            </tr>
+            <tr>
+              <td><b>名詞</b></td>
+              <td>酸 ➔ 共軛鹼(鹽)</td>
+              <td>酸 ➔ 鹽</td>
+            </tr>
+            <tr>
+              <td><b>形容詞</b></td>
+              <td>更弱酸性 ➔ 更強鹼性</td>
+              <td>--</td>
+            </tr>
+            <tr>
+              <td><b>副詞</b></td>
+              <td>更弱酸性 ➔ 更強鹼性<br><span style="color:var(--chalk-yellow);">pH &gt; 7</span></td>
+              <td>pH &gt; 7 (水解)</td>
+            </tr>
+          </table>
+          <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
+            • CH<sub>3</sub>COO<sup>-</sup> 水解使溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。<br>
+            • 大小比較：酸性 HF &gt; CH<sub>3</sub>COOH，鹼性 F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup>。
           </div>
         </div>
 
         <div class="note-pill" style="display:block; text-align:center;">
-          📌 展哥口訣：強酸共軛鹼，鹼性極微弱！
+          📌 展哥口訣：強離子不水解，弱離子必水解！
         </div>
       </div>
 
@@ -590,7 +659,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">204</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">218</span> 次
       </div>
     </div>
 
