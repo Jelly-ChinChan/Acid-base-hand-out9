@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>【展氏新解】多元酸的解離計算與一元弱酸進階範例</title>
+  <title>【展氏新解】鹽的分類與酸鹼性 ── 多元酸及其鹽與重要鹽類命名</title>
   <style>
     :root {
       --bg-board: #142c1f;
@@ -257,23 +257,6 @@
       letter-spacing: -0.4px;
     }
 
-    .chem-eq-hero {
-      font-weight: 900;
-      color: var(--chalk-green);
-      font-size: clamp(0.85rem, 2.5vw, 0.98rem);
-      text-align: center;
-      padding: 5px 4px;
-      margin: 4px 0;
-      background: rgba(0, 0, 0, 0.25);
-      border-radius: 6px;
-      border: 1px dashed var(--card-border);
-      white-space: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
-      letter-spacing: -0.4px;
-    }
-    .chem-eq-hero::-webkit-scrollbar { display: none; }
-
     .role-table {
       width: 100%;
       border-collapse: collapse;
@@ -292,21 +275,6 @@
     }
     .role-table th { background: var(--table-th-bg); font-weight: 800; }
 
-    .gold-glow {
-      background: rgba(253, 224, 71, 0.25) !important;
-      color: var(--chalk-yellow) !important;
-      font-weight: 900 !important;
-      text-shadow: 0 0 8px rgba(253, 224, 71, 0.8), 0 0 15px rgba(253, 224, 71, 0.5);
-      border: 1.5px solid var(--chalk-yellow) !important;
-      box-shadow: 0 0 10px rgba(253, 224, 71, 0.4);
-      animation: goldPulse 2s infinite alternate;
-    }
-
-    @keyframes goldPulse {
-      0% { box-shadow: 0 0 5px rgba(253, 224, 71, 0.4); }
-      100% { box-shadow: 0 0 14px rgba(253, 224, 71, 0.8); }
-    }
-
     .note-pill {
       display: inline-block;
       padding: 2px 7px;
@@ -316,15 +284,6 @@
       font-size: 0.77rem;
       font-weight: 700;
       margin-top: 4px;
-    }
-
-    .diagram-wrap {
-      width: 100%;
-      background: var(--diagram-bg);
-      border-radius: 8px;
-      padding: 6px 4px;
-      text-align: center;
-      border: 1px solid var(--card-border);
     }
 
     .cloze { transition: background-color 0.2s ease, color 0.2s ease; cursor: default; }
@@ -419,7 +378,7 @@
   <div class="toolbar">
     <div class="toolbar-title-wrap">
       <span class="brand-tag">展氏新解</span>
-      <span class="toolbar-title">多元酸的解離計算與一元弱酸進階範例</span>
+      <span class="toolbar-title">鹽的分類與酸鹼性 ── 多元酸及其鹽與重要鹽類命名</span>
     </div>
     <div class="btn-group">
       <button class="btn btn-primary" onclick="openQuiz()">📝 進入隨堂測驗</button>
@@ -435,12 +394,12 @@
     <div class="board-header">
       <div class="main-title-wrap">
         <span class="brand-tag" style="font-size:0.95rem; padding:3px 8px;">展氏新解</span>
-        <h1>多元酸及其鹽的分類、水解與酸鹼性判斷</h1>
-        <span class="badge-pill">二元酸/三元酸解離 · 某氫鹽酸鹼性判斷 · 磷酸系列命名與正鹽酸式鹽</span>
+        <h1>鹽的分類與酸鹼性</h1>
+        <span class="badge-pill">一元酸及其鹽 · 二元酸及其鹽 · 三元酸及其鹽 · 重要鹽類命名及鹽分類</span>
       </div>
     </div>
 
-    <!-- 四大核心欄位（忠於原始四欄式極致排版） -->
+    <!-- 四大核心欄位：完全對應板書四大塊 -->
     <div class="board-grid">
 
       <!-- 欄位一：一元酸及其鹽 -->
@@ -453,8 +412,8 @@
         <div class="section-box">
           <div class="sub-head">1. 鹽類的酸鹼性與水解反應</div>
           <div style="font-size:0.8rem; line-height:1.55; letter-spacing:-0.3px;">
-            • <b>強酸弱鹼鹽</b>（如 HCl + NaOH ➔ NaCl 或 NH<sub>4</sub>Cl）：<br>
-            　溶液顯 <span style="color:var(--chalk-cyan);">酸性</span>。<br>
+            • <b>強酸弱鹼鹽</b>（如 HCl + NaOH ➔ NaCl + H<sub>2</sub>O）：<br>
+            　溶液顯 <span style="color:var(--chalk-cyan);">中性/酸性</span>。<br>
             • <b>弱酸強鹼鹽</b>（如 HF、CH<sub>3</sub>COOH 之鈉鹽）：<br>
             　共軛鹼水解：F<sup>-</sup> + H<sub>2</sub>O ⇌ HF + OH<sup>-</sup><br>
             　溶液顯 <span style="color:var(--chalk-yellow);">鹼性</span>。<br><br>
@@ -468,11 +427,11 @@
         <div class="reaction-box" style="border-left: 3px solid var(--chalk-orange);">
           <div class="sub-head" style="color:var(--chalk-orange);">2. 離子水解實戰範例</div>
           <div style="font-size:0.79rem; line-height:1.5;">
-            • MgCl<sub>2</sub> 水溶液顯 <span style="color:var(--chalk-cyan);">酸性</span>：<br>
+            • MgCl<sub>2</sub> ➔ Mg(OH)<sup>+</sup> + HCl 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
             　Mg<sup>2+</sup> + H<sub>2</sub>O ⇌ Mg(OH)<sup>+</sup> + H<sup>+</sup><br>
-            • Cu(NO<sub>3</sub>)<sub>2</sub> 水溶液顯 <span style="color:var(--chalk-cyan);">酸性</span>：<br>
+            • Cu(NO<sub>3</sub>)<sub>2</sub> ➔ Cu(OH)<sup>+</sup> + HNO<sub>3</sub> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
             　Cu<sup>2+</sup> + H<sub>2</sub>O ⇌ Cu(OH)<sup>+</sup> + H<sup>+</sup><br>
-            • KCN 水溶液顯 <span style="color:var(--chalk-yellow);">鹼性</span>：<br>
+            • KCN ➔ KOH + HCN 顯 <span style="color:var(--chalk-yellow);">鹼性</span><br>
             　CN<sup>-</sup> + H<sub>2</sub>O ⇌ HCN + OH<sup>-</sup>
           </div>
         </div>
@@ -494,7 +453,7 @@
           <div style="font-size:0.8rem; line-height:1.55; letter-spacing:-0.3px;">
             • <b>硫酸 (H<sub>2</sub>SO<sub>4</sub>)</b>：<br>
             　H<sub>2</sub>SO<sub>4</sub> ➔ H<sup>+</sup> + HSO<sub>4</sub><sup>-</sup>（Ka1）<br>
-            　HSO<sub>4</sub><sup>-</sup> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup>（Ka2）<br>
+            　HSO<sub>4</sub><sup>-</sup> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup>（Ka2，酸性）<br>
             • <b>碳酸 (H<sub>2</sub>CO<sub>3</sub>)</b>：<br>
             　H<sub>2</sub>CO<sub>3</sub> ➔ HCO<sub>3</sub><sup>-</sup> ➔ CO<sub>3</sub><sup>2-</sup><br>
             • <b>硫化氫 (H<sub>2</sub>S)</b>：<br>
@@ -503,82 +462,87 @@
         </div>
 
         <div class="reaction-box" style="border-left: 3px solid var(--chalk-green);">
-          <div class="sub-head" style="color:var(--chalk-green);">2. 解離常數大小特性</div>
+          <div class="sub-head" style="color:var(--chalk-green);">2. 解離常數與某氫鹽酸鹼判斷</div>
           <div style="font-size:0.79rem; line-height:1.5;">
-            • 多元酸各階段解離常數恆符合：<br>
-            　<b style="color:var(--chalk-yellow);"> Ka1 &gt; Ka2 </b>（因帶負電離子再釋放質子需克服庫侖靜電引力）。<br>
-            • 常數差異：若 Ka1 &gt;&gt; Ka2（如 H<sub>2</sub>S 之 Ka1 × Ka2 &lt; 10<sup>-20</sup>），第二段解離極微弱。
+            • 各階段解離常數恆符合：<br>
+            　<b style="color:var(--chalk-yellow);"> Ka1 &gt; Ka2 </b><br>
+            • 判斷「某氫鹽」是酸性或鹼性法則：<br>
+            　若 Ka1 × Ka2 &gt; 10<sup>-14</sup> ➔ 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            　若 Ka1 × Ka2 &lt; 10<sup>-14</sup> ➔ 顯 <span style="color:var(--chalk-yellow);">鹼性</span>
           </div>
         </div>
 
         <div class="note-pill" style="display:block; text-align:center;">
-          💡 展哥提醒：多元酸第2段 Ka 遠小於第 1 段！
+          💡 展哥提醒：Ka1 × Ka2 ≷ 10<sup>-14</sup> 決定某氫鹽酸鹼！
         </div>
       </div>
 
-      <!-- 欄位三：三元酸與某氫鹽酸鹼性判斷 -->
+      <!-- 欄位三：三元酸及其鹽（磷酸系列） -->
       <div class="col-card">
         <div class="col-title">
-          <span>三、三元酸與某氫鹽判斷</span>
-          <span style="font-size:0.75rem; opacity:0.8;">磷酸系列與酸式鹽水解</span>
+          <span>三、三元酸及其鹽</span>
+          <span style="font-size:0.75rem; opacity:0.8;">磷酸 H<sub>3</sub>PO<sub>4</sub> 系列</span>
         </div>
 
         <div class="section-box">
-          <div class="sub-head">1. 三元酸 (磷酸 H<sub>3</sub>PO<sub>4</sub> 系列)</div>
+          <div class="sub-head">1. 三階段解離與酸鹼性</div>
           <div style="font-size:0.78rem; line-height:1.55; letter-spacing:-0.3px;">
-            • 三階段解離反應：<br>
             <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:4px; font-family:monospace; margin:3px 0; color:var(--chalk-cyan); font-size:0.73rem;">
               H<sub>3</sub>PO<sub>4</sub> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> ➔ HPO<sub>4</sub><sup>2-</sup> ➔ PO<sub>4</sub><sup>3-</sup>
             </div>
-            • 伴隨酸性遞減與共軛鹼強度遞增。
+            • 第 1 段：酸性（Ka1）<br>
+            • 第 2 段：酸性（Ka2）<br>
+            • 第 3 段：鹼性（Ka3）<br>
+            • 恆符合：Ka1 &gt; Ka2 &gt; Ka3
           </div>
         </div>
 
         <div class="reaction-box" style="border-left: 3px solid var(--chalk-cyan);">
           <div class="sub-head" style="color:var(--chalk-cyan);">
-            2. 判斷「某氫鹽」是酸性或鹼性法則
+            2. 離子水解實戰應用
           </div>
           <div style="font-size:0.78rem; line-height:1.5;">
-            針對酸式鹽（含有可解離氫的酸式根離子，如 HSO<sub>3</sub><sup>-</sup>、H<sub>2</sub>PO<sub>4</sub><sup>-</sup>、HPO<sub>4</sub><sup>2-</sup>），其水溶液酸鹼性取決於<b>解離傾向 (Ka2)</b> 與 <b>水解傾向 (Kb = Kw / Ka1)</b> 的競爭：<br>
-            • 若 <b style="color:var(--chalk-yellow);"> Ka1 × Ka2 &gt; 10<sup>-14</sup> </b> ➔ 顯 <span style="color:var(--chalk-cyan);">酸性</span>（例如 H<sub>2</sub>PO<sub>4</sub><sup>-</sup>）<br>
-            • 若 <b style="color:var(--chalk-yellow);"> Ka1 × Ka2 &lt; 10<sup>-14</sup> </b> ➔ 顯 <span style="color:var(--chalk-yellow);">鹼性</span>（例如 HPO<sub>4</sub><sup>2-</sup>）<br>
+            • MgCl<sub>2</sub> ➔ Mg(OH)<sup>+</sup> + HCl (酸性)<br>
+            • Cu(NO<sub>3</sub>)<sub>2</sub> ➔ Cu(OH)<sup>+</sup> + HNO<sub>3</sub> (酸性)<br>
+            • KCN ➔ KOH + HCN (鹼性)<br>
+            <span style="font-size:0.72rem; color:var(--text-sub);">※ 根據水解產物強弱精準判定溶液酸鹼性。</span>
           </div>
         </div>
 
         <div class="note-pill" style="display:block; text-align:center;">
-          📌 展哥口訣：Ka1 × Ka2 ≷ 10<sup>-14</sup> 決定某氫鹽酸鹼！
+          📌 展哥口訣：三元酸逐級解離，常數遞減！
         </div>
       </div>
 
-      <!-- 欄位四：重要鹽類命名及鹽分類（酸式鹽與正鹽完整對照，對齊最新板書） -->
+      <!-- 欄位四：重要鹽類命名及鹽分類（酸式鹽與正鹽） -->
       <div class="col-card">
         <div class="col-title">
           <span>四、重要鹽類命名與分類</span>
-          <span style="font-size:0.75rem; opacity:0.8;">正鹽、酸式鹽完整對照</span>
+          <span style="font-size:0.75rem; opacity:0.8;">酸式鹽 vs. 正鹽</span>
         </div>
 
         <div class="section-box">
-          <div class="sub-head">1. 磷酸系列 (三元酸 H<sub>3</sub>PO<sub>4</sub>)</div>
-          <table class="role-table" style="font-size:0.72rem; margin:3px 0;">
-            <tr style="background:rgba(0,0,0,0.4);"><th>化學式</th><th>名稱</th><th>鹽分類</th><th>酸鹼性</th></tr>
+          <div class="sub-head">1. 磷酸系列 (H<sub>3</sub>PO<sub>4</sub>)</div>
+          <table class="role-table" style="font-size:0.71rem; margin:2px 0;">
+            <tr style="background:rgba(0,0,0,0.4);"><th>化學式</th><th>名稱</th><th>分類</th><th>性質</th></tr>
             <tr><td>H<sub>3</sub>PO<sub>4</sub></td><td>磷酸</td><td>三元酸</td><td>酸性</td></tr>
-            <tr><td>NaH<sub>2</sub>PO<sub>4</sub></td><td>磷酸二氫鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-cyan);">酸式鹽(酸)</span></td></tr>
-            <tr><td>Na<sub>2</sub>HPO<sub>4</sub></td><td>磷酸氫二鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-yellow);">酸式鹽(鹼)</span></td></tr>
+            <tr><td>NaH<sub>2</sub>PO<sub>4</sub></td><td>磷酸二氫鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-cyan);">酸性</span></td></tr>
+            <tr><td>Na<sub>2</sub>HPO<sub>4</sub></td><td>磷酸氫二鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-yellow);">鹼性</span></td></tr>
             <tr><td>Na<sub>3</sub>PO<sub>4</sub></td><td>磷酸鈉</td><td>正鹽</td><td><span style="color:var(--chalk-yellow);">鹼性</span></td></tr>
           </table>
         </div>
 
-        <div class="reaction-box" style="border-left: 3px solid var(--chalk-orange); font-size:0.78rem;">
+        <div class="reaction-box" style="border-left: 3px solid var(--chalk-orange); font-size:0.76rem;">
           <div class="sub-head" style="color:var(--chalk-orange);">2. 亞磷酸與次磷酸系列</div>
-          • <b>亞磷酸 (H<sub>3</sub>PO<sub>3</sub>)</b>：二元酸（含 1 個 P-H 鍵）<br>
-          　NaH<sub>2</sub>PO<sub>3</sub>：亞磷酸二氫鈉 ➔ <b style="color:var(--chalk-yellow);">正鹽</b>（非酸式鹽）<br>
-          • <b>次磷酸 (H<sub>3</sub>PO<sub>2</sub>)</b>：一元酸（含 2 個 P-H 鍵）<br>
+          • <b>亞磷酸 (H<sub>3</sub>PO<sub>3</sub>)</b>：二元酸<br>
+          　NaH<sub>2</sub>PO<sub>3</sub>：亞磷酸二氫鈉 ➔ <b style="color:var(--chalk-yellow);">正鹽</b>（不展鹽）<br>
+          • <b>次磷酸 (H<sub>3</sub>PO<sub>2</sub>)</b>：一元酸<br>
           　NaH<sub>2</sub>PO<sub>2</sub>：次磷酸鈉 ➔ <b style="color:var(--chalk-yellow);">正鹽</b><br>
-          <span style="font-size:0.72rem; color:var(--chalk-cyan);">⚠️ 板書重點：依分子結構中的 P-H 鍵判定可解離氫，確認其為正鹽！</span>
+          <span style="font-size:0.7rem; color:var(--chalk-cyan);">⚠️ 結構 P-H 鍵決定可解離 H 數！</span>
         </div>
 
         <div class="note-pill" style="display:block; text-align:center;">
-          💡 展哥筆記：亞磷酸、次磷酸的鈉鹽命名與正鹽判斷！
+          💡 展哥筆記：注意亞/次磷酸鈉鹽為正鹽！
         </div>
       </div>
 
@@ -588,9 +552,9 @@
     <div class="extension-container" style="background: var(--ext-card-bg); border: 2px solid var(--ext-card-border); border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; border-bottom: 2px solid var(--ext-badge-border); padding-bottom: 8px;">
         <div style="font-size: 1.05rem; font-weight: 900; color: var(--ext-title); display: flex; align-items: center; gap: 8px;">
-          <span>🧠 【展氏新解】延伸思維：某氫鹽水解競爭與磷酸結構特論</span>
+          <span>🧠 【展氏新解】延伸思維：多元酸與某氫鹽水解特論</span>
         </div>
-        <span style="font-size: 0.78rem; background: rgba(192,132,252,0.18); border: 1px solid #a855f7; color: var(--ext-title); padding: 2px 8px; border-radius: 20px; font-weight: 800;">某氫鹽水解機制 · Ka1 × Ka2 數學推導</span>
+        <span style="font-size: 0.78rem; background: rgba(192,132,252,0.18); border: 1px solid #a855f7; color: var(--ext-title); padding: 2px 8px; border-radius: 20px; font-weight: 800;">某氫鹽水解機制 · 磷酸系列結構</span>
       </div>
 
       <div style="display: grid; grid-template-columns: 1fr; gap: 12px;">
@@ -599,15 +563,15 @@
             📌 A. 為什麼「某氫鹽」的酸鹼性可以由 Ka1 × Ka2 與 10<sup>-14</sup> 決定？
           </div>
           <p style="font-size:0.81rem; color:var(--text-sub); line-height:1.55;">
-            以二元酸 H<sub>2</sub>A 的酸式根 HA<sup>-</sup> 為例，它在水中同時面臨兩條路徑（解離 Ka2 與水解 Kb = Kw / Ka1）。比較兩者的 [H<sup>+</sup>] 與 [OH<sup>-</sup>] 產生速率，可推導出 [H<sup>+</sup>] = √(Ka1 × Ka2)。若 Ka1 × Ka2 &gt; 10<sup>-14</sup> 顯酸性；反之顯鹼性。
+            以二元酸的酸式根 HA<sup>-</sup> 為例，它在水中同時面臨兩條路徑（解離 Ka2 與水解 Kb = Kw / Ka1）。比較兩者的 [H<sup>+</sup>] 與 [OH<sup>-</sup>] 產生速率，可推導出 [H<sup>+</sup>] = √(Ka1 × Ka2)。若 Ka1 × Ka2 &gt; 10<sup>-14</sup> 顯酸性；反之顯鹼性。
           </p>
         </div>
         <div style="background: var(--ext-inner-box); border: 1px solid var(--card-border); border-radius: 8px; padding: 11px; font-size: 0.84rem;">
           <div style="font-weight:800; color:var(--chalk-orange); font-size:0.9rem; margin-bottom:4px;">
-            📌 B. 亞磷酸 (H<sub>3</sub>PO<sub>3</sub>) 與次磷酸 (H<sub>3</sub>PO<sub>2</sub>) 為什麼不是三元酸？
+            📌 B. 為什麼亞磷酸 (H<sub>3</sub>PO<sub>3</sub>) 與次磷酸 (H<sub>3</sub>PO<sub>2</sub>) 的鈉鹽是正鹽？
           </div>
           <p style="font-size:0.81rem; color:var(--text-sub); line-height:1.55;">
-            分子中與磷原子直接以共價鍵結合的氫（P-H 鍵）無法游離出氫離子。亞磷酸含 1 個 P-H 鍵（二元酸）；次磷酸含 2 個 P-H 鍵（一元酸）。這也是為什麼 NaH<sub>2</sub>PO<sub>3</sub> 與 NaH<sub>2</sub>PO<sub>2</sub> 叫做正鹽而非酸式鹽的根本原因！
+            因為分子結構中與磷原子直接以共價鍵結合的氫（P-H 鍵）無法游離出氫離子。亞磷酸含 1 個 P-H 鍵（實際可解離氫為 2 個）；次磷酸含 2 個 P-H 鍵（實際可解離氫僅 1 個）。因此其對應的鈉鹽中已無可被中和的解離氫，故屬於正鹽而非酸式鹽！
           </p>
         </div>
       </div>
@@ -615,10 +579,10 @@
 
     <!-- 頁尾版權 -->
     <div class="footer">
-      <div>展氏新解 · 多元酸及其鹽的分類、水解與酸鹼性判斷</div>
+      <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">165</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">182</span> 次
       </div>
     </div>
 
@@ -630,7 +594,7 @@
       <div class="quiz-header">
         <div style="display:flex; align-items:center; gap:8px;">
           <span class="brand-tag">展氏新解</span>
-          <h2 style="font-size:1.15rem; font-weight:900;">多元酸鹽與酸鹼性判斷即時檢測系統</h2>
+          <h2 style="font-size:1.15rem; font-weight:900;">鹽的分類與多元酸解離即時檢測系統</h2>
         </div>
         <button class="btn" style="background:#dc2626; color:#fff; border:none;" onclick="closeQuiz()">✕ 關閉返回講義</button>
       </div>
