@@ -285,26 +285,32 @@
       margin-top: 4px;
     }
 
-    /* 完美水平對齊的 Ka 箭頭樣式 */
+    /* 完美的水平對齊 Ka 箭頭樣式，支援橫向滾動 */
+    .eq-scroll-wrap {
+      width: 100%;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 4px 2px;
+      scrollbar-width: thin;
+    }
+    .eq-scroll-wrap::-webkit-scrollbar { height: 4px; }
+    .eq-scroll-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
+
     .arrow-container {
-      display: inline-block;
-      position: relative;
-      margin: 0 4px;
-      text-align: center;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
       vertical-align: middle;
-      font-family: monospace;
+      margin: 0 4px;
     }
     .arrow-container .ka-label {
-      display: block;
-      font-size: 0.65rem;
+      font-size: 0.62rem;
       color: var(--chalk-yellow);
       font-weight: bold;
-      line-height: 1;
-      margin-bottom: 1px;
+      line-height: 1.1;
     }
     .arrow-container .arrow-line {
-      display: block;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--chalk-cyan);
       line-height: 1;
     }
@@ -564,22 +570,24 @@
 
         <div class="section-box">
           <div class="sub-head">1. 二元酸分段解離與酸性</div>
-          <div style="font-size:0.78rem; line-height:1.8; letter-spacing:-0.3px;">
-            • <b>H<sub>2</sub>SO<sub>4</sub></b> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
-            HSO<sub>4</sub><sup>-</sup> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-            SO<sub>4</sub><sup>2-</sup><br>
-            • <b>H<sub>2</sub>CO<sub>3</sub></b> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
-            HCO<sub>3</sub><sup>-</sup> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-            CO<sub>3</sub><sup>2-</sup><br>
-            • <b>H<sub>2</sub>S</b> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
-            HS<sup>-</sup> 
-            <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-            S<sup>2-</sup>
+          <div class="eq-scroll-wrap">
+            <div style="font-size:0.78rem; line-height:1.8;">
+              • <b>H<sub>2</sub>SO<sub>4</sub></b> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
+              HSO<sub>4</sub><sup>-</sup> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
+              SO<sub>4</sub><sup>2-</sup><br>
+              • <b>H<sub>2</sub>CO<sub>3</sub></b> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
+              HCO<sub>3</sub><sup>-</sup> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
+              CO<sub>3</sub><sup>2-</sup><br>
+              • <b>H<sub>2</sub>S</b> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
+              HS<sup>-</sup> 
+              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
+              S<sup>2-</sup>
+            </div>
           </div>
         </div>
 
@@ -606,16 +614,18 @@
 
         <div class="section-box">
           <div class="sub-head">1. 三元酸分段解離</div>
-          <div style="font-size:0.75rem; line-height:1.7; letter-spacing:-0.3px;">
+          <div style="font-size:0.75rem; line-height:1.6; letter-spacing:-0.3px;">
             • 恆符合：<i>K</i><sub>a1</sub> &gt; <i>K</i><sub>a2</sub> &gt; <i>K</i><sub>a3</sub><br>
-            <div style="background:rgba(0,0,0,0.3); padding:6px 4px; border-radius:4px; font-family:monospace; margin:4px 0; color:var(--chalk-cyan); font-size:0.68rem; text-align:center;">
-              H<sub>3</sub>PO<sub>4</sub> 
-              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
-              H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 
-              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-              HPO<sub>4</sub><sup>2-</sup> 
-              <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a3</sub></span><span class="arrow-line">➔</span></span> 
-              PO<sub>4</sub><sup>3-</sup>
+            <div class="eq-scroll-wrap" style="margin:4px 0;">
+              <div style="font-family:monospace; color:var(--chalk-cyan); font-size:0.72rem; white-space:nowrap;">
+                H<sub>3</sub>PO<sub>4</sub> 
+                <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
+                H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 
+                <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
+                HPO<sub>4</sub><sup>2-</sup> 
+                <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a3</sub></span><span class="arrow-line">➔</span></span> 
+                PO<sub>4</sub><sup>3-</sup>
+              </div>
             </div>
             • <b>判斷「某氫鹽」酸鹼性法則</b>：<br>
             　已知 <i>K</i><sub>a1</sub> = ，<i>K</i><sub>a2</sub> = <br>
@@ -758,7 +768,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">410</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">428</span> 次
       </div>
     </div>
 
