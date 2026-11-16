@@ -77,7 +77,7 @@
 
     .toolbar {
       width: 100%;
-      max-width: 1440px;
+      max-width: 1560px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -147,7 +147,7 @@
 
     .board-container {
       width: 100%;
-      max-width: 1440px;
+      max-width: 1560px;
       background-color: var(--bg-board);
       border: 8px solid var(--board-frame);
       border-radius: 14px;
@@ -194,13 +194,14 @@
 
     .board-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 12px;
       align-items: stretch;
     }
 
-    @media (max-width: 1200px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .board-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 1400px) { .board-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 900px) { .board-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .board-grid { grid-template-columns: 1fr; } }
 
     .col-card {
       background: var(--card-bg);
@@ -393,11 +394,11 @@
       <div class="main-title-wrap">
         <span class="brand-tag" style="font-size:0.95rem; padding:3px 8px;">展氏新解</span>
         <h1>鹽的分類與酸鹼性</h1>
-        <span class="badge-pill">一元酸及其鹽 · 二元酸及其鹽 · 三元酸及其鹽 · 重要鹽類命名及鹽分類</span>
+        <span class="badge-pill">一元酸及其鹽 · 二元酸及其鹽 · 三元酸及其鹽 · 重要鹽類命名 · 離子水解酸鹼性</span>
       </div>
     </div>
 
-    <!-- 四大核心欄位 -->
+    <!-- 五大核心欄位 -->
     <div class="board-grid">
 
       <!-- 欄位一（左板）：一元酸及其鹽 -->
@@ -530,7 +531,7 @@
         </div>
       </div>
 
-      <!-- 欄位二（中左板）：二元酸及其鹽 -->
+      <!-- 欄位二：二元酸及其鹽 -->
       <div class="col-card">
         <div class="col-title">
           <span>二、二元酸及其鹽</span>
@@ -540,10 +541,9 @@
         <div class="section-box">
           <div class="sub-head">1. 二元酸分段解離與酸性</div>
           <div style="font-size:0.8rem; line-height:1.55; letter-spacing:-0.3px;">
-            • <b>H<sub>2</sub>SO<sub>4</sub></b> ➔ H<sup>+</sup> + HSO<sub>4</sub><sup>-</sup> (<i>K</i><sub>a1</sub>)<br>
-            　HSO<sub>4</sub><sup>-</sup> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup> (<i>K</i><sub>a2</sub>，酸性)<br>
-            • <b>H<sub>2</sub>CO<sub>3</sub></b> ➔ HCO<sub>3</sub><sup>-</sup> ➔ CO<sub>3</sub><sup>2-</sup><br>
-            • <b>H<sub>2</sub>S</b> ➔ HS<sup>-</sup> ➔ S<sup>2-</sup>
+            • <b>H<sub>2</sub>SO<sub>4</sub></b> ➔<sup><i>K</i><sub>a1</sub></sup> HSO<sub>4</sub><sup>-</sup> ➔<sup><i>K</i><sub>a2</sub></sup> SO<sub>4</sub><sup>2-</sup><br>
+            • <b>H<sub>2</sub>CO<sub>3</sub></b> ➔<sup><i>K</i><sub>a1</sub></sup> HCO<sub>3</sub><sup>-</sup> ➔<sup><i>K</i><sub>a2</sub></sup> CO<sub>3</sub><sup>2-</sup><br>
+            • <b>H<sub>2</sub>S</b> ➔<sup><i>K</i><sub>a1</sub></sup> HS<sup>-</sup> ➔<sup><i>K</i><sub>a2</sub></sup> S<sup>2-</sup>
           </div>
         </div>
 
@@ -561,49 +561,95 @@
         </div>
       </div>
 
-      <!-- 欄位三（中右板）：三元酸及其鹽與水解實戰 -->
+      <!-- 欄位三：三元酸及其鹽（磷酸系列） -->
       <div class="col-card">
         <div class="col-title">
-          <span>三、三元酸及其鹽與水解</span>
-          <span style="font-size:0.75rem; opacity:0.8;">磷酸系列與水解實戰</span>
+          <span>三、三元酸及其鹽</span>
+          <span style="font-size:0.75rem; opacity:0.8;">磷酸 H<sub>3</sub>PO<sub>4</sub> 系列</span>
         </div>
 
         <div class="section-box">
-          <div class="sub-head">1. 三元酸 (磷酸 H<sub>3</sub>PO<sub>4</sub> 系列)</div>
+          <div class="sub-head">1. 三元酸分段解離</div>
           <div style="font-size:0.78rem; line-height:1.55; letter-spacing:-0.3px;">
-            <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:4px; font-family:monospace; margin:3px 0; color:var(--chalk-cyan); font-size:0.73rem;">
-              H<sub>3</sub>PO<sub>4</sub> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> ➔ HPO<sub>4</sub><sup>2-</sup> ➔ PO<sub>4</sub><sup>3-</sup>
-            </div>
             • 恆符合：<i>K</i><sub>a1</sub> &gt; <i>K</i><sub>a2</sub> &gt; <i>K</i><sub>a3</sub><br>
+            <div style="background:rgba(0,0,0,0.3); padding:4px; border-radius:4px; font-family:monospace; margin:3px 0; color:var(--chalk-cyan); font-size:0.68rem;">
+              H<sub>3</sub>PO<sub>4</sub> ➔<sup><i>K</i><sub>a1</sub></sup> H<sub>2</sub>PO<sub>4</sub><sup>-</sup> ➔<sup><i>K</i><sub>a2</sub></sup> HPO<sub>4</sub><sup>2-</sup> ➔<sup><i>K</i><sub>a3</sub></sup> PO<sub>4</sub><sup>3-</sup>
+            </div>
             • <b>判斷「某氫鹽」酸鹼性法則</b>：<br>
-            　若 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> ➔ 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
-            　若 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &lt; 10<sup>-14</sup> ➔ 顯 <span style="color:var(--chalk-yellow);">鹼性</span>
+            　若 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            　若 <i>K</i><sub>a2</sub> × <i>K</i><sub>a3</sub> &lt; 10<sup>-14</sup> ➔ HPO<sub>4</sub><sup>2-</sup> 顯 <span style="color:var(--chalk-yellow);">鹼性</span>
           </div>
         </div>
 
         <div class="reaction-box" style="border-left: 3px solid var(--chalk-cyan);">
           <div class="sub-head" style="color:var(--chalk-cyan);">
-            2. 離子水解實戰反應式
+            2. 三元酸酸鹼性遞進
           </div>
           <div style="font-size:0.76rem; line-height:1.5;">
-            • <b>MgCl<sub>2</sub></b> ➔ Mg(OH)<sup>+</sup> + HCl 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
-            　Mg<sup>2+</sup> + H<sub>2</sub>O ⇌ Mg(OH)<sup>+</sup> + H<sup>+</sup><br>
-            • <b>Cu(NO<sub>3</sub>)<sub>2</sub></b> ➔ Cu(OH)<sup>+</sup> + HNO<sub>3</sub> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
-            　Cu<sup>2+</sup> + H<sub>2</sub>O ⇌ Cu(OH)<sup>+</sup> + H<sup>+</sup><br>
-            • <b>KCN</b> ➔ KOH + HCN 顯 <span style="color:var(--chalk-yellow);">鹼性</span><br>
-            　CN<sup>-</sup> + H<sub>2</sub>O ⇌ HCN + OH<sup>-</sup>
+            • $\text{H}_3\text{PO}_4$ 區段：顯酸性<br>
+            • $\text{H}_2\text{PO}_4^-$ 區段：顯酸性<br>
+            • $\text{HPO}_4^{2-}$ 區段：顯鹼性<br>
+            • $\text{PO}_4^{3-}$ 區段：顯鹼性
           </div>
         </div>
 
         <div class="note-pill" style="display:block; text-align:center;">
-          📌 展哥口訣：某氫鹽看 Ka1×Ka2，離子水解看強弱！
+          📌 展哥口訣：某氫鹽看 Ka 乘積判定酸鹼！
         </div>
       </div>
 
-      <!-- 欄位四（右板）：重要鹽類命名及鹽分類 -->
+      <!-- 欄位四：其他非多元酸鹽的水解酸鹼性（獨立新段落） -->
       <div class="col-card">
         <div class="col-title">
-          <span>四、重要鹽類命名與分類</span>
+          <span>四、其他非多元酸鹽水解</span>
+          <span style="font-size:0.75rem; opacity:0.8;">離子水解實戰</span>
+        </div>
+
+        <div class="section-box">
+          <div class="sub-head" style="color:var(--chalk-yellow);">1. 氯化鎂 (MgCl<sub>2</sub>)</div>
+          <div style="font-size:0.76rem; line-height:1.5;">
+            • $\text{MgCl}_2 = \text{Mg(OH)}_2 + \text{HCl}$<br>
+            　故 $\text{Mg}^{2+}$ 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            • 反應式：<br>
+            <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
+              $\text{Mg}^{2+} + \text{H}_2\text{O} \rightleftharpoons \text{Mg(OH)}^+ + \text{H}^+$
+            </div>
+          </div>
+        </div>
+
+        <div class="section-box" style="border-left-color: var(--chalk-cyan);">
+          <div class="sub-head" style="color:var(--chalk-cyan);">2. 硝酸銅 (Cu(NO<sub>3</sub>)<sub>2</sub>)</div>
+          <div style="font-size:0.76rem; line-height:1.5;">
+            • $\text{Cu(NO}_3)_2 = \text{Cu(OH)}_2 + \text{HNO}_3$<br>
+            　故 $\text{Cu}^{2+}$ 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            • 反應式：<br>
+            <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
+              $\text{Cu}^{2+} + \text{H}_2\text{O} \rightleftharpoons \text{Cu(OH)}^+ + \text{H}^+$
+            </div>
+          </div>
+        </div>
+
+        <div class="section-box" style="border-left-color: var(--chalk-green);">
+          <div class="sub-head" style="color:var(--chalk-green);">3. 氰化鉀 (KCN)</div>
+          <div style="font-size:0.76rem; line-height:1.5;">
+            • $\text{KCN} = \text{KOH} + \text{HCN}$<br>
+            　故 $\text{CN}^-$ 顯 <span style="color:var(--chalk-yellow);">鹼性</span><br>
+            • 反應式：<br>
+            <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-cyan); font-size:0.7rem;">
+              $\text{CN}^- + \text{H}_2\text{O} \rightleftharpoons \text{HCN} + \text{OH}^-$
+            </div>
+          </div>
+        </div>
+
+        <div class="note-pill" style="display:block; text-align:center;">
+          📌 展哥筆記：金屬陽離子與非金屬陰離子水解！
+        </div>
+      </div>
+
+      <!-- 欄位五：重要鹽類命名及鹽分類 -->
+      <div class="col-card">
+        <div class="col-title">
+          <span>五、重要鹽類命名與分類</span>
           <span style="font-size:0.75rem; opacity:0.8;">酸式鹽 vs. 正鹽</span>
         </div>
 
@@ -668,7 +714,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">312</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">368</span> 次
       </div>
     </div>
 
