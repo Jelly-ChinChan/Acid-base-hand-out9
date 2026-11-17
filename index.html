@@ -276,15 +276,15 @@
 
     .note-pill {
       display: block;
-      padding: 4px 8px;
-      border-radius: 4px;
+      padding: 8px;
+      border-radius: 6px;
       background: var(--highlight-bg);
       color: var(--chalk-yellow);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 700;
-      margin-top: 4px;
-      text-align: center;
-      line-height: 1.4;
+      margin-top: 6px;
+      line-height: 1.5;
+      border: 1px dashed var(--chalk-yellow);
     }
 
     /* 完美的水平對齊 Ka 箭頭樣式 */
@@ -539,7 +539,7 @@
               <th>從酸鹼中和來看</th>
             </tr>
             <tr>
-              <td><b>反應式</b></td>
+              <td><b>反应式</b></td>
               <td>CH<sub>3</sub>COOH ➔ CH<sub>3</sub>COO<sup>-</sup></td>
               <td>CH<sub>3</sub>COOH ➔ 鹽</td>
             </tr>
@@ -568,8 +568,17 @@
           </div>
         </div>
 
+        <!-- 展哥詳解：共軛酸鹼強弱順序的反向關係 -->
         <div class="note-pill">
-          📌 展哥講解：酸性 HF &gt; CH<sub>3</sub>COOH，鹼性 F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup>。<br>
+          📌 <b>展哥詳解：為什麼共軛酸與共軛鹼的強弱順序相反？</b><br>
+          • <b>酸性比較</b>：HF &gt; CH<sub>3</sub>COOH<br>
+          • <b>共軛鹼鹼性</b>：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
+          在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<b><i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup></b>[span_1](start_span)[span_1](end_span)。<br>
+          • HF 的 <i>K</i><sub>a</sub> 較大（$6.8 \times 10^{-4}$），代表 HF 較容易解離出 $\text{H}^+$，因此其共軛鹼 $\text{F}^-$ 的 <i>K</i><sub>b</sub> 必然較小（$1.47 \times 10^{-11}$，鹼性較弱）[span_2](start_span)[span_2](end_span)。<br>
+          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（$1.8 \times 10^{-5}$），代表其較不容易解離，因此其共軛鹼 $\text{CH}_3\text{COO}^-$ 的 <i>K</i><sub>b</sub> 必然較大（$5.56 \times 10^{-10}$，鹼性較強）[span_3](start_span)[span_3](end_span)。<br>
+          <b>結論口訣</b>：<br>
+          🔹 共軛酸越強，其共軛鹼越弱！<br>
+          🔹 共軛酸越弱，其共軛鹼越強！<br>
           (強離子不水解，弱離子必水解！)
         </div>
       </div>
@@ -785,7 +794,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">462</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">480</span> 次
       </div>
     </div>
 
