@@ -274,6 +274,34 @@
     }
     .role-table th { background: var(--table-th-bg); font-weight: 800; }
 
+    /* 展哥詳解專用色塊（改為精緻深藍紫護眼色系） */
+    .note-pill-custom {
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      background: rgba(99, 102, 241, 0.14);
+      color: #e0e7ff;
+      font-size: 0.76rem;
+      font-weight: 600;
+      margin-top: 6px;
+      line-height: 1.55;
+      border: 1px solid rgba(99, 102, 241, 0.35);
+    }
+
+    /* 展哥結論專用色塊（恢復原本經典金色發光色塊） */
+    .note-pill-gold {
+      display: block;
+      padding: 10px;
+      border-radius: 6px;
+      background: var(--highlight-bg);
+      color: var(--chalk-yellow);
+      font-size: 0.76rem;
+      font-weight: 700;
+      margin-top: 6px;
+      line-height: 1.55;
+      border: 1px dashed var(--chalk-yellow);
+    }
+
     .note-pill {
       display: block;
       padding: 8px;
@@ -567,18 +595,24 @@
           </div>
         </div>
 
-        <!-- 展哥詳解 -->
-        <div class="note-pill">
+        <!-- 展哥詳解（改為深藍紫護眼色塊） -->
+        <div class="note-pill-custom">
           📌 <b>展哥詳解：為什麼共軛酸鹼強弱順序相反？</b><br>
-          • <b>酸性比較</b>：HF &gt; CH<sub>3</sub>COOH<br>
-          • <b>共軛鹼鹼性</b>：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
-          在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<b><i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup></b>。<br>
-          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，鹼性較弱）。<br>
-          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，鹼性較強）。<br>
-          <b>結論口訣</b>：<br>
+          • 酸性比較：HF &gt; CH<sub>3</sub>COOH<br>
+          • 共軛鹼鹼性：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
+          在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup>。也就是 <i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> 乘積為定值，或者說他們成<b>「反比」</b>[span_0](start_span)[span_0](end_span)。<br>
+          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，鹼性較弱）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_1](start_span)[span_1](end_span)。<br>
+          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，鹼性較強）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_2](start_span)[span_2](end_span)。
+        </div>
+
+        <!-- 展哥結論（恢復金色發光色塊） -->
+        <div class="note-pill-gold">
+          📌 <b>展哥結論：共軛酸鹼對遵守 <i>K</i><sub>a</sub>、<i>K</i><sub>b</sub> 反比定律</b><br>
           🔹 共軛酸越強，其共軛鹼越弱！<br>
           🔹 共軛酸越弱，其共軛鹼越強！<br>
-          (強離子不水解，弱離子必水解！)
+          因此：<br>
+          強酸的負離子在水中處於完全解離、完全自由，不水解（不會搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使水釋放 OH<sup>-</sup>）；反過來說，弱酸的負離子不喜歡處於完全解離的自由狀態，傾向於與 H<sup>+</sup> 結合，易水解（會去搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使 H<sub>2</sub>O 釋放 OH<sup>-</sup>）。<br><br>
+          強鹼的正離子亦同，傾向自由不水解；弱鹼的正離子亦同，傾向易水解，正離子傾向去搶走 H<sub>2</sub>O 的 OH<sup>-</sup> 而使 H<sub>2</sub>O 釋放 H<sup>+</sup>。
         </div>
       </div>
 
@@ -810,7 +844,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">535</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">550</span> 次
       </div>
     </div>
 
