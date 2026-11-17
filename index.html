@@ -275,39 +275,51 @@
     .role-table th { background: var(--table-th-bg); font-weight: 800; }
 
     .note-pill {
-      display: inline-block;
-      padding: 2px 7px;
+      display: block;
+      padding: 4px 8px;
       border-radius: 4px;
       background: var(--highlight-bg);
       color: var(--chalk-yellow);
-      font-size: 0.77rem;
+      font-size: 0.75rem;
       font-weight: 700;
       margin-top: 4px;
+      text-align: center;
+      line-height: 1.4;
     }
 
-    /* 完美的水平對齊 Ka 箭頭樣式，支援橫向滾動 */
+    /* 完美的水平對齊 Ka 箭頭樣式 */
     .eq-scroll-wrap {
       width: 100%;
       overflow-x: auto;
       white-space: nowrap;
-      padding: 4px 2px;
+      padding: 6px 2px;
       scrollbar-width: thin;
     }
     .eq-scroll-wrap::-webkit-scrollbar { height: 4px; }
     .eq-scroll-wrap::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
 
+    .chem-line {
+      display: inline-flex;
+      align-items: center;
+      font-family: monospace;
+      font-size: 0.8rem;
+    }
+
     .arrow-container {
       display: inline-flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       vertical-align: middle;
       margin: 0 4px;
+      height: 28px;
     }
     .arrow-container .ka-label {
       font-size: 0.62rem;
       color: var(--chalk-yellow);
       font-weight: bold;
-      line-height: 1.1;
+      line-height: 1;
+      margin-bottom: 2px;
     }
     .arrow-container .arrow-line {
       font-size: 0.85rem;
@@ -551,13 +563,14 @@
             </tr>
           </table>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
-            • CH<sub>3</sub>COO<sup>-</sup> 水解使溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。<br>
-            • 大小比較：酸性 HF &gt; CH<sub>3</sub>COOH，鹼性 F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup>。
+            • CH<sub>3</sub>COO<sup>-</sup> 發生水解：CH<sub>3</sub>COO<sup>-</sup> + H<sub>2</sub>O ⇌ CH<sub>3</sub>COOH + OH<sup>-</sup>。<br>
+            • 故弱酸強鹼鹽（如 CH<sub>3</sub>COONa）水溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。
           </div>
         </div>
 
-        <div class="note-pill" style="display:block; text-align:center;">
-          📌 展哥口訣：強離子不水解，弱離子必水解！
+        <div class="note-pill">
+          📌 展哥講解：酸性 HF &gt; CH<sub>3</sub>COOH，鹼性 F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup>。<br>
+          (強離子不水解，弱離子必水解！)
         </div>
       </div>
 
@@ -571,18 +584,22 @@
         <div class="section-box">
           <div class="sub-head">1. 二元酸分段解離與酸性</div>
           <div class="eq-scroll-wrap">
-            <div style="font-size:0.78rem; line-height:1.8;">
-              • <b>H<sub>2</sub>SO<sub>4</sub></b> 
+            <div class="chem-line">
+              <b>H<sub>2</sub>SO<sub>4</sub></b> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
               HSO<sub>4</sub><sup>-</sup> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-              SO<sub>4</sub><sup>2-</sup><br>
-              • <b>H<sub>2</sub>CO<sub>3</sub></b> 
+              SO<sub>4</sub><sup>2-</sup>
+            </div>
+            <div class="chem-line" style="margin-top:4px;">
+              <b>H<sub>2</sub>CO<sub>3</sub></b> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
               HCO<sub>3</sub><sup>-</sup> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
-              CO<sub>3</sub><sup>2-</sup><br>
-              • <b>H<sub>2</sub>S</b> 
+              CO<sub>3</sub><sup>2-</sup>
+            </div>
+            <div class="chem-line" style="margin-top:4px;">
+              <b>H<sub>2</sub>S</b> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
               HS<sup>-</sup> 
               <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a2</sub></span><span class="arrow-line">➔</span></span> 
@@ -617,7 +634,7 @@
           <div style="font-size:0.75rem; line-height:1.6; letter-spacing:-0.3px;">
             • 恆符合：<i>K</i><sub>a1</sub> &gt; <i>K</i><sub>a2</sub> &gt; <i>K</i><sub>a3</sub><br>
             <div class="eq-scroll-wrap" style="margin:4px 0;">
-              <div style="font-family:monospace; color:var(--chalk-cyan); font-size:0.72rem; white-space:nowrap;">
+              <div class="chem-line">
                 H<sub>3</sub>PO<sub>4</sub> 
                 <span class="arrow-container"><span class="ka-label"><i>K</i><sub>a1</sub></span><span class="arrow-line">➔</span></span> 
                 H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 
@@ -628,9 +645,9 @@
               </div>
             </div>
             • <b>判斷「某氫鹽」酸鹼性法則</b>：<br>
-            　已知 <i>K</i><sub>a1</sub> = ，<i>K</i><sub>a2</sub> = <br>
+            　已知 <i>K</i><sub>a1</sub> = 10<sup>-2</sup>，<i>K</i><sub>a2</sub> = 10<sup>-8</sup><br>
             　<i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
-            　已知 <i>K</i><sub>a2</sub> = ，<i>K</i><sub>a3</sub> = <br>
+            　已知 <i>K</i><sub>a2</sub> = 10<sup>-8</sup>，<i>K</i><sub>a3</sub> = 10<sup>-12</sup><br>
             　<i>K</i><sub>a2</sub> × <i>K</i><sub>a3</sub> &lt; 10<sup>-14</sup> ➔ HPO<sub>4</sub><sup>2-</sup> 顯 <span style="color:var(--chalk-yellow);">鹼性</span>
           </div>
         </div>
@@ -768,7 +785,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">428</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">462</span> 次
       </div>
     </div>
 
