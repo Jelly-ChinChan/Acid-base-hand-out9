@@ -17,6 +17,10 @@
       --chalk-orange: #fdba74;
       --chalk-green: #86efac;
       --chalk-red: #f87171;
+      /* 酸性改粉紅色、鹼性改亮藍色 */
+      --chalk-acid: #f472b6;
+      --chalk-base: #38bdf8;
+      
       --highlight-bg: rgba(253, 224, 71, 0.18);
       --section-box-bg: rgba(0, 0, 0, 0.22);
       --reaction-bg: rgba(0, 0, 0, 0.35);
@@ -43,6 +47,8 @@
       --chalk-orange: #c2410c;
       --chalk-green: #15803d;
       --chalk-red: #b91c1c;
+      --chalk-acid: #db2777;
+      --chalk-base: #0284c7;
       --highlight-bg: #fef3c7;
       --section-box-bg: #f1f5f9;
       --reaction-bg: #e2e8f0;
@@ -274,7 +280,16 @@
     }
     .role-table th { background: var(--table-th-bg); font-weight: 800; }
 
-    /* 展哥詳解專用色塊（改為精緻深藍紫護眼色系） */
+    /* 副詞欄位 pH 數值靠右置右樣式 */
+    .ph-right {
+      display: block;
+      text-align: right;
+      padding-right: 8px;
+      margin-top: 2px;
+      color: var(--chalk-yellow);
+    }
+
+    /* 展哥詳解專用色塊 */
     .note-pill-custom {
       display: block;
       padding: 10px;
@@ -288,7 +303,7 @@
       border: 1px solid rgba(99, 102, 241, 0.35);
     }
 
-    /* 展哥結論專用色塊（恢復原本經典金色發光色塊） */
+    /* 展哥結論專用色塊 */
     .note-pill-gold {
       display: block;
       padding: 10px;
@@ -353,6 +368,10 @@
       color: var(--chalk-cyan);
       line-height: 1;
     }
+
+    /* 全域酸鹼性顏色指定：酸性=粉紅色，鹼性=亮藍色 */
+    .txt-acid { color: var(--chalk-acid) !important; font-weight: bold; }
+    .txt-base { color: var(--chalk-base) !important; font-weight: bold; }
 
     .cloze { transition: background-color 0.2s ease, color 0.2s ease; cursor: default; }
     body.cloze-mode .cloze {
@@ -498,22 +517,22 @@
             </tr>
             <tr>
               <td><b>形容詞</b></td>
-              <td>酸性 ➔ 鹼性</td>
+              <td><span class="txt-acid">酸性</span> ➔ <span class="txt-base">鹼性</span></td>
               <td>--</td>
             </tr>
             <tr>
               <td><b>副詞</b></td>
               <td>
-                超強酸性 ➔ 超弱鹼性<br>
-                <span style="color:var(--chalk-yellow); display:inline-block; margin-top:2px;">pH約 7</span>
+                <span class="txt-acid">超強酸性</span> ➔ <span class="txt-base">超弱鹼性</span>
+                <span class="ph-right">pH約 7</span>
               </td>
               <td>--</td>
             </tr>
           </table>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
             • ① Cl<sup>-</sup> 是 HCl 被酸鹼中和後的半產物，例如氯鹽。<br>
-            • ② Cl<sup>-</sup> 也是 HCl 的共軛鹼。因 HCl 酸性很強，故 Cl<sup>-</sup> 鹼性極弱。<br>
-            <b style="color:var(--chalk-yellow);">由①、②得：</b>Cl<sup>-</sup> 所形成的鹽類，水中鹼性忽略，呈中性。
+            • ② Cl<sup>-</sup> 也是 HCl 的共軛鹼。因 HCl <span class="txt-acid">酸性</span>很強，故 Cl<sup>-</sup> <span class="txt-base">鹼性</span>極弱。<br>
+            <b style="color:var(--chalk-yellow);">由①、②得：</b>Cl<sup>-</sup> 所形成的鹽類，水中<span class="txt-base">鹼性</span>忽略，呈中性。
           </div>
         </div>
 
@@ -538,21 +557,21 @@
             </tr>
             <tr>
               <td><b>形容詞</b></td>
-              <td>酸性 ➔ 鹼性</td>
+              <td><span class="txt-acid">酸性</span> ➔ <span class="txt-base">鹼性</span></td>
               <td>--</td>
             </tr>
             <tr>
               <td><b>副詞</b></td>
               <td>
-                多弱酸性 ➔ 強鹼性<br>
-                <span style="color:var(--chalk-yellow); display:inline-block; margin-top:2px;">pH &gt; 7</span>
+                <span class="txt-acid">多弱酸性</span> ➔ <span class="txt-base">強鹼性</span>
+                <span class="ph-right">pH &gt; 7</span>
               </td>
               <td>--</td>
             </tr>
           </table>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
             • F<sup>-</sup> 發生水解：F<sup>-</sup> + H<sub>2</sub>O ⇌ HF + OH<sup>-</sup>。<br>
-            • 故弱酸強鹼鹽（如 NaF）水溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。
+            • 故弱酸強鹼鹽（如 NaF）水溶液顯 <b class="txt-base">鹼性</b>。
           </div>
         </div>
 
@@ -577,46 +596,46 @@
             </tr>
             <tr>
               <td><b>形容詞</b></td>
-              <td>酸性 ➔ 鹼性</td>
+              <td><span class="txt-acid">酸性</span> ➔ <span class="txt-base">鹼性</span></td>
               <td>--</td>
             </tr>
             <tr>
               <td><b>副詞</b></td>
               <td>
-                更弱酸性 ➔ 更強鹼性<br>
-                <span style="color:var(--chalk-yellow); display:inline-block; margin-top:2px;">pH &gt; 7</span>
+                <span class="txt-acid">更弱酸性</span> ➔ <span class="txt-base">更強鹼性</span>
+                <span class="ph-right">pH &gt; 7</span>
               </td>
               <td>--</td>
             </tr>
           </table>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4;">
             • CH<sub>3</sub>COO<sup>-</sup> 發生水解：CH<sub>3</sub>COO<sup>-</sup> + H<sub>2</sub>O ⇌ CH<sub>3</sub>COOH + OH<sup>-</sup>。<br>
-            • 故弱酸強鹼鹽（如 CH<sub>3</sub>COONa）水溶液顯 <b style="color:var(--chalk-yellow);">鹼性</b>。
+            • 故弱酸強鹼鹽（如 CH<sub>3</sub>COONa）水溶液顯 <b class="txt-base">鹼性</b>。
           </div>
         </div>
 
-        <!-- 展哥詳解（改為深藍紫護眼色塊） -->
+        <!-- 展哥詳解（深藍紫護眼色塊） -->
         <div class="note-pill-custom">
           📌 <b>展哥詳解：為什麼共軛酸鹼強弱順序相反？</b><br>
-          • 酸性比較：HF &gt; CH<sub>3</sub>COOH<br>
-          • 共軛鹼鹼性：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
+          • <span class="txt-acid">酸性</span>比較：HF &gt; CH<sub>3</sub>COOH<br>
+          • 共軛鹼<span class="txt-base">鹼性</span>：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
           在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup>。也就是 <i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> 乘積為定值，或者說他們成<b>「反比」</b>[span_0](start_span)[span_0](end_span)。<br>
-          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，鹼性較弱）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_1](start_span)[span_1](end_span)。<br>
-          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，鹼性較強）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_2](start_span)[span_2](end_span)。
+          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，<span class="txt-base">鹼性</span>較弱）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_1](start_span)[span_1](end_span)。<br>
+          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，<span class="txt-base">鹼性</span>較強）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_2](start_span)[span_2](end_span)。
         </div>
 
-        <!-- 展哥結論（恢復金色發光色塊） -->
+        <!-- 展哥結論（金色發光色塊） -->
         <div class="note-pill-gold">
           📌 <b>展哥結論：共軛酸鹼對遵守 <i>K</i><sub>a</sub>、<i>K</i><sub>b</sub> 反比定律</b><br>
           🔹 共軛酸越強，其共軛鹼越弱！<br>
           🔹 共軛酸越弱，其共軛鹼越強！<br>
           因此：<br>
-          強酸的負離子在水中處於完全解離、完全自由，不水解（不會搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使水釋放 OH<sup>-</sup>）；反過來說，弱酸的負離子不喜歡處於完全解離的自由狀態，傾向於與 H<sup>+</sup> 結合，易水解（會去搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使 H<sub>2</sub>O 釋放 OH<sup>-</sup>）。<br><br>
-          強鹼的正離子亦同，傾向自由不水解；弱鹼的正離子亦同，傾向易水解，正離子傾向去搶走 H<sub>2</sub>O 的 OH<sup>-</sup> 而使 H<sub>2</sub>O 釋放 H<sup>+</sup>。
+          強<span class="txt-acid">酸</span>的負離子在水中處於完全解離、完全自由，不水解（不會搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使水釋放 OH<sup>-</sup>）；反過來說，弱<span class="txt-acid">酸</span>的負離子不喜歡處於完全解離的自由狀態，傾向於與 H<sup>+</sup> 結合，易水解（會去搶走 H<sub>2</sub>O 的 H<sup>+</sup> 而使 H<sub>2</sub>O 釋放 OH<sup>-</sup>）。<br><br>
+          強<span class="txt-base">鹼</span>的正離子亦同，傾向自由不水解；弱<span class="txt-base">鹼</span>的正離子亦同，傾向易水解，正離子傾向去搶走 H<sub>2</sub>O 的 OH<sup>-</sup> 而使 H<sub>2</sub>O 釋放 H<sup>+</sup>。
         </div>
       </div>
 
-      <!-- 欄位二：二元酸及其鹽（已拆開並加入詳細訣竅說明） -->
+      <!-- 欄位二：二元酸及其鹽 -->
       <div class="col-card">
         <div class="col-title">
           <span>二、二元酸及其鹽</span>
@@ -635,10 +654,10 @@
             </div>
           </div>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4; color:var(--text-sub);">
-            • 因為 HSO<sub>4</sub><sup>-</sup> 可以當布洛酸也可以當布洛鹼：<br>
+            • 因為 HSO<sub>4</sub><sup>-</sup> 可以當布洛<span class="txt-acid">酸</span>也可以當布洛<span class="txt-base">鹼</span>：<br>
             　① 解離：HSO<sub>4</sub><sup>-</sup> ⇌ H<sup>+</sup> + SO<sub>4</sub><sup>2-</sup><br>
             　② 水解：HSO<sub>4</sub><sup>-</sup> + H<sub>2</sub>O ⇌ H<sub>2</sub>SO<sub>4</sub> + OH<sup>-</sup><br>
-            • <b style="color:var(--chalk-yellow);">先講訣竅</b>：若 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在中間的酸式根呈 <b style="color:var(--chalk-cyan);">酸性</b>。例如 HSO<sub>4</sub><sup>-</sup> 的 <i>K</i><sub>a1</sub> = 無限大、<i>K</i><sub>a2</sub> = 0.01，因此 HSO<sub>4</sub><sup>-</sup> 呈 <b style="color:var(--chalk-cyan);">酸性</b>。
+            • <b style="color:var(--chalk-yellow);">先講訣竅</b>：若 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在中間的酸式根呈 <b class="txt-acid">酸性</b>。例如 HSO<sub>4</sub><sup>-</sup> 的 <i>K</i><sub>a1</sub> = 無限大、<i>K</i><sub>a2</sub> = 0.01，因此 HSO<sub>4</sub><sup>-</sup> 呈 <b class="txt-acid">酸性</b>。
           </div>
         </div>
 
@@ -654,7 +673,7 @@
             </div>
           </div>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4; color:var(--text-sub);">
-            • 夾在中間的 HCO<sub>3</sub><sup>-</sup> 經 <i>K</i><sub>a1</sub> = 4.3×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 5.6×10<sup>-11</sup> 及其乘積判定，其水溶液呈 <b style="color:var(--chalk-yellow);">鹼性</b>。
+            • 夾在中間的 HCO<sub>3</sub><sup>-</sup> 經 <i>K</i><sub>a1</sub> = 4.3×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 5.6×10<sup>-11</sup> 及其乘積判定，其水溶液呈 <b class="txt-base">鹼性</b>。
           </div>
         </div>
 
@@ -670,14 +689,14 @@
             </div>
           </div>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4; color:var(--text-sub);">
-            • 夾在中間的 HS<sup>-</sup> 經 <i>K</i><sub>a1</sub> = 1.1×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 1.3×10<sup>-13</sup> 及其乘積判定，其水溶液呈 <b style="color:var(--chalk-cyan);">酸性</b>。
+            • 夾在中間的 HS<sup>-</sup> 經 <i>K</i><sub>a1</sub> = 1.1×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 1.3×10<sup>-13</sup> 及其乘積判定，其水溶液呈 <b class="txt-acid">酸性</b>。
           </div>
         </div>
 
         <div class="note-pill">
           💡 <b>展哥總結訣竅</b>：<br>
-          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b style="color:var(--chalk-cyan);">酸性</b>。<br>
-          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &lt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b style="color:var(--chalk-yellow);">鹼性</b>。
+          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-acid">酸性</b>。<br>
+          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &lt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-base">鹼性</b>。
         </div>
       </div>
 
@@ -705,9 +724,9 @@
             </div>
             • <b>判斷「某氫鹽」酸鹼性法則</b>：<br>
             　已知 <i>K</i><sub>a1</sub> = 10<sup>-2</sup>，<i>K</i><sub>a2</sub> = 10<sup>-8</sup><br>
-            　<i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            　<i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> ➔ H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 顯 <span class="txt-acid">酸性</span><br>
             　已知 <i>K</i><sub>a2</sub> = 10<sup>-8</sup>，<i>K</i><sub>a3</sub> = 10<sup>-12</sup><br>
-            　<i>K</i><sub>a2</sub> × <i>K</i><sub>a3</sub> &lt; 10<sup>-14</sup> ➔ HPO<sub>4</sub><sup>2-</sup> 顯 <span style="color:var(--chalk-yellow);">鹼性</span>
+            　<i>K</i><sub>a2</sub> × <i>K</i><sub>a3</sub> &lt; 10<sup>-14</sup> ➔ HPO<sub>4</sub><sup>2-</sup> 顯 <span class="txt-base">鹼性</span>
           </div>
         </div>
 
@@ -716,10 +735,10 @@
             2. 三元酸酸鹼性遞進
           </div>
           <div style="font-size:0.76rem; line-height:1.5;">
-            • H<sub>3</sub>PO<sub>4</sub> 區段：顯酸性<br>
-            • H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 區段：顯酸性<br>
-            • HPO<sub>4</sub><sup>2-</sup> 區段：顯鹼性<br>
-            • PO<sub>4</sub><sup>3-</sup> 區段：顯鹼性
+            • H<sub>3</sub>PO<sub>4</sub> 區段：顯<span class="txt-acid">酸性</span><br>
+            • H<sub>2</sub>PO<sub>4</sub><sup>-</sup> 區段：顯<span class="txt-acid">酸性</span><br>
+            • HPO<sub>4</sub><sup>2-</sup> 區段：顯<span class="txt-base">鹼性</span><br>
+            • PO<sub>4</sub><sup>3-</sup> 區段：顯<span class="txt-base">鹼性</span>
           </div>
         </div>
 
@@ -739,7 +758,7 @@
           <div class="sub-head" style="color:var(--chalk-yellow);">1. 氯化鎂 (MgCl<sub>2</sub>)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
             • MgCl<sub>2</sub> = Mg(OH)<sub>2</sub> + HCl<br>
-            　故 Mg<sup>2+</sup> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            　故 Mg<sup>2+</sup> 顯 <span class="txt-acid">酸性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
               Mg<sup>2+</sup> + H<sub>2</sub>O ⇌ Mg(OH)<sup>+</sup> + H<sup>+</sup>
@@ -751,7 +770,7 @@
           <div class="sub-head" style="color:var(--chalk-cyan);">2. 硝酸銅 (Cu(NO<sub>3</sub>)<sub>2</sub>)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
             • Cu(NO<sub>3</sub>)<sub>2</sub> = Cu(OH)<sub>2</sub> + HNO<sub>3</sub><br>
-            　故 Cu<sup>2+</sup> 顯 <span style="color:var(--chalk-cyan);">酸性</span><br>
+            　故 Cu<sup>2+</sup> 顯 <span class="txt-acid">酸性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
               Cu<sup>2+</sup> + H<sub>2</sub>O ⇌ Cu(OH)<sup>+</sup> + H<sup>+</sup>
@@ -763,7 +782,7 @@
           <div class="sub-head" style="color:var(--chalk-green);">3. 氰化鉀 (KCN)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
             • KCN = KOH + HCN<br>
-            　故 CN<sup>-</sup> 顯 <span style="color:var(--chalk-yellow);">鹼性</span><br>
+            　故 CN<sup>-</sup> 顯 <span class="txt-base">鹼性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-cyan); font-size:0.7rem;">
               CN<sup>-</sup> + H<sub>2</sub>O ⇌ HCN + OH<sup>-</sup>
@@ -787,10 +806,10 @@
           <div class="sub-head">1. 磷酸系列 (H<sub>3</sub>PO<sub>4</sub>)</div>
           <table class="role-table" style="font-size:0.71rem; margin:2px 0;">
             <tr style="background:rgba(0,0,0,0.4);"><th>化學式</th><th>名稱</th><th>分類</th><th>性質</th></tr>
-            <tr><td>H<sub>3</sub>PO<sub>4</sub></td><td>磷酸</td><td>三元酸</td><td>酸性</td></tr>
-            <tr><td>NaH<sub>2</sub>PO<sub>4</sub></td><td>磷酸二氫鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-cyan);">酸性</span></td></tr>
-            <tr><td>Na<sub>2</sub>HPO<sub>4</sub></td><td>磷酸氫二鈉</td><td>酸式鹽</td><td><span style="color:var(--chalk-yellow);">鹼性</span></td></tr>
-            <tr><td>Na<sub>3</sub>PO<sub>4</sub></td><td>磷酸鈉</td><td>正鹽</td><td><span style="color:var(--chalk-yellow);">鹼性</span></td></tr>
+            <tr><td>H<sub>3</sub>PO<sub>4</sub></td><td>磷酸</td><td>三元酸</td><td><span class="txt-acid">酸性</span></td></tr>
+            <tr><td>NaH<sub>2</sub>PO<sub>4</sub></td><td>磷酸二氫鈉</td><td>酸式鹽</td><td><span class="txt-acid">酸性</span></td></tr>
+            <tr><td>Na<sub>2</sub>HPO<sub>4</sub></td><td>磷酸氫二鈉</td><td>酸式鹽</td><td><span class="txt-base">鹼性</span></td></tr>
+            <tr><td>Na<sub>3</sub>PO<sub>4</sub></td><td>磷酸鈉</td><td>正鹽</td><td><span class="txt-base">鹼性</span></td></tr>
           </table>
         </div>
 
@@ -825,7 +844,7 @@
             📌 A. 為什麼「某氫鹽」的酸鹼性可以由 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> 與 10<sup>-14</sup> 決定？
           </div>
           <p style="font-size:0.81rem; color:var(--text-sub); line-height:1.55;">
-            以二元酸的酸式根 HA<sup>-</sup> 為例，它在水中同時面臨解離 (<i>K</i><sub>a2</sub>) 與水解 (<i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> / <i>K</i><sub>a1</sub>) 的競爭。推導可得 [H<sup>+</sup>] = √(<i>K</i><sub>a1</sub><i>K</i><sub>a2</sub>)。若 <i>K</i><sub>a1</sub><i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> 顯酸性；反之顯鹼性。
+            以二元酸的酸式根 HA<sup>-</sup> 為例，它在水中同時面臨解離 (<i>K</i><sub>a2</sub>) 與水解 (<i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> / <i>K</i><sub>a1</sub>) 的競爭。推導可得 [H<sup>+</sup>] = √(<i>K</i><sub>a1</sub><i>K</i><sub>a2</sub>)。若 <i>K</i><sub>a1</sub><i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup> 顯<span class="txt-acid">酸性</span>；反之顯<span class="txt-base">鹼性</span>。
           </p>
         </div>
         <div style="background: var(--ext-inner-box); border: 1px solid var(--card-border); border-radius: 8px; padding: 11px; font-size: 0.84rem;">
@@ -844,7 +863,7 @@
       <div>展氏新解 · 鹽的分類與酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">550</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">584</span> 次
       </div>
     </div>
 
