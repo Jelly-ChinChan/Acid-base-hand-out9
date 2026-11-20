@@ -361,12 +361,17 @@
       border-radius: 4px;
       padding: 4px 2px;
       white-space: nowrap;
+      overflow-x: auto;
     }
     .struct-title {
       color: var(--chalk-cyan);
       font-weight: 700;
       margin-bottom: 3px;
       font-size: 0.68rem;
+    }
+    .mol-shift-right {
+      display: inline-block;
+      transform: translateX(6px);
     }
     .bond-long {
       display: inline-block;
@@ -924,27 +929,31 @@
           <div class="struct-grid">
             <div class="struct-item">
               <div class="struct-title">磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>O</div>
+              <div><span class="coord-arrow">↑</span></div>
               <div><sup>-</sup>O<span class="bond-long"></span>P<span class="bond-long"></span>O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>|</div>
+              <div>O<sup>-</sup></div>
             </div>
             <div class="struct-item">
               <div class="struct-title">亞磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div class="mol-shift-right">
+                <div>O</div>
+                <div><span class="coord-arrow">↑</span></div>
+                <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
+                <div>|</div>
+                <div>O<sup>-</sup></div>
+              </div>
             </div>
             <div class="struct-item">
               <div class="struct-title">次磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">H</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div class="mol-shift-right">
+                <div>O</div>
+                <div><span class="coord-arrow">↑</span></div>
+                <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
+                <div><span class="ph-bond">|</span></div>
+                <div><span class="ph-bond">H</span></div>
+              </div>
             </div>
           </div>
           <div style="margin-top:5px; font-size:0.69rem; color:var(--text-sub); line-height:1.4;">
@@ -993,7 +1002,7 @@
       <div>展氏新解 · 多元酸鹽的酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">642</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">644</span> 次
       </div>
     </div>
 
