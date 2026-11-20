@@ -346,7 +346,7 @@
       padding: 7px 6px;
       margin-bottom: 6px;
       font-family: monospace;
-      font-size: 0.68rem;
+      font-size: 0.66rem;
       line-height: 1.35;
       color: var(--text-main);
     }
@@ -360,12 +360,21 @@
       background: rgba(255, 255, 255, 0.04);
       border-radius: 4px;
       padding: 4px 2px;
+      white-space: nowrap;
     }
     .struct-title {
       color: var(--chalk-cyan);
       font-weight: 700;
       margin-bottom: 3px;
       font-size: 0.68rem;
+    }
+    .bond-long {
+      display: inline-block;
+      width: 14px;
+      border-top: 1.5px solid currentColor;
+      vertical-align: middle;
+      margin: 0 1px;
+      height: 0;
     }
     .coord-arrow {
       color: var(--chalk-yellow);
@@ -374,6 +383,10 @@
     .ph-bond {
       color: var(--chalk-acid);
       font-weight: 800;
+    }
+    .bond-long.ph-bond {
+      border-top-color: var(--chalk-acid);
+      border-top-width: 2px;
     }
 
     .eq-scroll-wrap {
@@ -791,7 +804,7 @@
         </div>
       </div>
 
-      <!-- 欄位四：其他非多元酸鹽的水解酸鹼性（獨立新段落） -->
+      <!-- 欄位四：其他非多元酸鹽的水解酸鹼性 -->
       <div class="col-card">
         <div class="col-title">
           <span>四、其他非多元酸鹽水解</span>
@@ -881,6 +894,9 @@
               <td><span class="txt-base">鹼性</span></td>
             </tr>
           </table>
+          <div style="font-size:0.7rem; color:var(--chalk-cyan); margin-top:4px; line-height:1.35;">
+            ⚠️ 板書重點：依分子結構中的 P-H 鍵判定可解離 H 數！
+          </div>
         </div>
 
         <div class="section-box" style="border-left-color: var(--chalk-cyan);">
@@ -903,32 +919,32 @@
           </div>
         </div>
 
-        <!-- 結構圖示（P→O 配位共價鍵 ↑）+ 展哥筆記 -->
+        <!-- 結構圖示 + 展哥筆記 -->
         <div class="struct-diagram-box">
           <div class="struct-grid">
             <div class="struct-item">
               <div class="struct-title">磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div><sup>-</sup>O-P-O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><sup>-</sup>O<span class="bond-long"></span>P<span class="bond-long"></span>O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
             <div class="struct-item">
               <div class="struct-title">亞磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div><span class="ph-bond">H-P</span>-O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
             <div class="struct-item">
               <div class="struct-title">次磷酸本體</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div><span class="ph-bond">H-P</span>-O<sup>-</sup></div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
-              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">H</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><span class="ph-bond">H<span class="bond-long ph-bond"></span>P</span><span class="bond-long"></span>O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">|</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">H</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
             </div>
           </div>
           <div style="margin-top:5px; font-size:0.69rem; color:var(--text-sub); line-height:1.4;">
@@ -977,7 +993,7 @@
       <div>展氏新解 · 多元酸鹽的酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">641</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">642</span> 次
       </div>
     </div>
 
