@@ -292,7 +292,6 @@
       margin-top: 2px;
     }
 
-    /* 副詞欄位 pH 數值靠右置右樣式 */
     .ph-right {
       display: block;
       text-align: right;
@@ -301,7 +300,6 @@
       color: var(--chalk-yellow);
     }
 
-    /* 展哥詳解專用色塊 */
     .note-pill-custom {
       display: block;
       padding: 10px;
@@ -315,7 +313,6 @@
       border: 1px solid rgba(99, 102, 241, 0.35);
     }
 
-    /* 展哥結論專用色塊 */
     .note-pill-gold {
       display: block;
       padding: 10px;
@@ -335,11 +332,48 @@
       border-radius: 6px;
       background: var(--highlight-bg);
       color: var(--chalk-yellow);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 700;
       margin-top: 6px;
       line-height: 1.5;
       border: 1px dashed var(--chalk-yellow);
+    }
+
+    .struct-diagram-box {
+      background: rgba(0, 0, 0, 0.32);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 7px 6px;
+      margin-bottom: 6px;
+      font-family: monospace;
+      font-size: 0.68rem;
+      line-height: 1.35;
+      color: var(--text-main);
+    }
+    .struct-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      text-align: center;
+    }
+    .struct-item {
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 4px;
+      padding: 4px 2px;
+    }
+    .struct-title {
+      color: var(--chalk-cyan);
+      font-weight: 700;
+      margin-bottom: 3px;
+      font-size: 0.68rem;
+    }
+    .coord-arrow {
+      color: var(--chalk-yellow);
+      font-weight: 900;
+    }
+    .ph-bond {
+      color: var(--chalk-acid);
+      font-weight: 800;
     }
 
     .eq-scroll-wrap {
@@ -381,7 +415,6 @@
       line-height: 1;
     }
 
-    /* 全域酸鹼性顏色指定：酸性=粉紅色，鹼性=亮藍色 */
     .txt-acid { color: var(--chalk-acid) !important; font-weight: bold; }
     .txt-base { color: var(--chalk-base) !important; font-weight: bold; }
 
@@ -407,7 +440,6 @@
       cursor: pointer !important;
     }
 
-    /* 測驗 Modal */
     .quiz-modal {
       position: fixed; inset: 0;
       background: rgba(0, 0, 0, 0.85);
@@ -631,9 +663,9 @@
           📌 <b>展哥詳解：為什麼共軛酸鹼強弱順序相反？</b><br>
           • <span class="txt-acid">酸性</span>比較：HF &gt; CH<sub>3</sub>COOH<br>
           • 共軛鹼<span class="txt-base">鹼性</span>：F<sup>-</sup> &lt; CH<sub>3</sub>COO<sup>-</sup><br>
-          在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup>。也就是 <i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> 乘積為定值，或者說他們成<b>「反比」</b>[span_0](start_span)[span_0](end_span)。<br>
-          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，<span class="txt-base">鹼性</span>較弱）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_1](start_span)[span_1](end_span)。<br>
-          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，<span class="txt-base">鹼性</span>較強）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比[span_2](start_span)[span_2](end_span)。
+          在 25°C 水溶液中，任何一組共軛酸鹼對都必須遵守：<i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> = <i>K</i><sub>w</sub> = 10<sup>-14</sup>。也就是 <i>K</i><sub>a</sub> × <i>K</i><sub>b</sub> 乘積為定值，或者說他們成<b>「反比」</b>。<br>
+          • HF 的 <i>K</i><sub>a</sub> 較大（6.8 × 10<sup>-4</sup>），代表 HF 較容易解離出 H<sup>+</sup>，因此其共軛鹼 F<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較小（1.47 × 10<sup>-11</sup>，<span class="txt-base">鹼性</span>較弱）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比。<br>
+          • CH<sub>3</sub>COOH 的 <i>K</i><sub>a</sub> 較小（1.8 × 10<sup>-5</sup>），代表其較不容易解離，因此其共軛鹼 CH<sub>3</sub>COO<sup>-</sup> 的 <i>K</i><sub>b</sub> 必然較大（5.56 × 10<sup>-10</sup>，<span class="txt-base">鹼性</span>較強）。因為 <i>K</i><sub>a</sub> 與 <i>K</i><sub>b</sub> 成反比。
         </div>
 
         <!-- 展哥結論（金色發光色塊） -->
@@ -701,14 +733,14 @@
             </div>
           </div>
           <div style="font-size:0.75rem; margin-top:4px; line-height:1.4; color:var(--text-sub);">
-            • 夾在中間的 HS<sup>-</sup> 經 <i>K</i><sub>a1</sub> = 1.1×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 1.3×10<sup>-13</sup> 及其乘積判定，其水溶液呈 <b class="txt-base">鹼性</b>[span_3](start_span)[span_3](end_span)。
+            • 夾在中間的 HS<sup>-</sup> 經 <i>K</i><sub>a1</sub> = 1.1×10<sup>-7</sup>、<i>K</i><sub>a2</sub> = 1.3×10<sup>-13</sup> 及其乘積判定，其水溶液呈 <b class="txt-base">鹼性</b>。
           </div>
         </div>
 
         <div class="note-pill">
           💡 <b>展哥總結訣竅</b>：<br>
-          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-acid">酸性</b>[span_4](start_span)[span_4](end_span)。<br>
-          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &lt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-base">鹼性</b>[span_5](start_span)[span_5](end_span)。
+          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &gt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-acid">酸性</b>。<br>
+          🔹 <i>K</i><sub>a1</sub> × <i>K</i><sub>a2</sub> &lt; 10<sup>-14</sup>，則夾在 <i>K</i><sub>a1</sub>、<i>K</i><sub>a2</sub> 中間的某酸氫根呈 <b class="txt-base">鹼性</b>。
         </div>
       </div>
 
@@ -871,8 +903,41 @@
           </div>
         </div>
 
-        <div class="note-pill" style="display:block; text-align:center;">
-          💡 展哥筆記：酸式鹽必須唸出某酸氫，其中次磷酸鹽沒有酸式鹽！
+        <!-- 結構圖示（P→O 配位共價鍵 ↑）+ 展哥筆記 -->
+        <div class="struct-diagram-box">
+          <div class="struct-grid">
+            <div class="struct-item">
+              <div class="struct-title">磷酸本體</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><sup>-</sup>O-P-O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;</div>
+            </div>
+            <div class="struct-item">
+              <div class="struct-title">亞磷酸本體</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><span class="ph-bond">H-P</span>-O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;O<sup>-</sup>&nbsp;&nbsp;&nbsp;</div>
+            </div>
+            <div class="struct-item">
+              <div class="struct-title">次磷酸本體</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;O&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="coord-arrow">↑</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div><span class="ph-bond">H-P</span>-O<sup>-</sup></div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+              <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="ph-bond">H</span>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            </div>
+          </div>
+          <div style="margin-top:5px; font-size:0.69rem; color:var(--text-sub); line-height:1.4;">
+            正鹽本體可能已含有無法解離的 <span class="ph-bond">P-H</span> 鍵，因此化學式有 H 不一定是酸式鹽，且也不一定會念成「某酸氫」。
+          </div>
+        </div>
+
+        <div class="note-pill" style="display:block; text-align:left;">
+          💡 <b>展哥筆記</b>：酸式鹽必須唸出某酸氫，其中只有「次磷酸鹽」沒有酸式鹽！酸式鹽也不一定是<span class="txt-acid">酸性</span>，要看相鄰 <i>K</i><sub>a</sub> 乘積決定。
         </div>
       </div>
 
@@ -912,7 +977,7 @@
       <div>展氏新解 · 多元酸鹽的酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">639</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">641</span> 次
       </div>
     </div>
 
