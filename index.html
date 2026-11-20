@@ -339,11 +339,22 @@
       border: 1px dashed var(--chalk-yellow);
     }
 
-    .hydro-align-line {
+    .hydro-align-table {
+      display: inline-table;
+      border-collapse: collapse;
+      vertical-align: top;
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 0.73rem;
+      font-size: 0.75rem;
       line-height: 1.35;
-      margin-top: 2px;
+    }
+    .hydro-align-table td {
+      padding: 0 2px;
+      text-align: center;
+      vertical-align: top;
+    }
+    .hydro-align-table td:first-child {
+      text-align: left;
+      padding-left: 0;
     }
 
     .struct-diagram-box {
@@ -386,6 +397,10 @@
       padding: 0;
       text-align: center;
       vertical-align: middle;
+    }
+    .o-minus-center {
+      display: inline-block;
+      transform: translateX(2.5px);
     }
     .bond-long {
       display: inline-block;
@@ -833,10 +848,20 @@
         <div class="section-box">
           <div class="sub-head" style="color:var(--chalk-yellow);">1. 氯化鎂 (MgCl<sub>2</sub>)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
-            • <div class="hydro-align-line">
-              MgCl<sub>2</sub> = Mg(OH)<sub>2</sub> + HCl<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-base">弱鹼</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-acid">強酸</span>
-            </div>
+            • <table class="hydro-align-table">
+              <tr>
+                <td>MgCl<sub>2</sub> =</td>
+                <td>Mg(OH)<sub>2</sub></td>
+                <td>+</td>
+                <td>HCl</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><span class="txt-base">弱鹼</span></td>
+                <td></td>
+                <td><span class="txt-acid">強酸</span></td>
+              </tr>
+            </table><br>
             　故 Mg<sup>2+</sup> 顯 <span class="txt-acid">酸性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
@@ -848,10 +873,20 @@
         <div class="section-box" style="border-left-color: var(--chalk-cyan);">
           <div class="sub-head" style="color:var(--chalk-cyan);">2. 硝酸銅 (Cu(NO<sub>3</sub>)<sub>2</sub>)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
-            • <div class="hydro-align-line">
-              Cu(NO<sub>3</sub>)<sub>2</sub> = Cu(OH)<sub>2</sub> + HNO<sub>3</sub><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-base">弱鹼</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-acid">強酸</span>
-            </div>
+            • <table class="hydro-align-table">
+              <tr>
+                <td>Cu(NO<sub>3</sub>)<sub>2</sub> =</td>
+                <td>Cu(OH)<sub>2</sub></td>
+                <td>+</td>
+                <td>HNO<sub>3</sub></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><span class="txt-base">弱鹼</span></td>
+                <td></td>
+                <td><span class="txt-acid">強酸</span></td>
+              </tr>
+            </table><br>
             　故 Cu<sup>2+</sup> 顯 <span class="txt-acid">酸性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-green); font-size:0.7rem;">
@@ -863,10 +898,20 @@
         <div class="section-box" style="border-left-color: var(--chalk-green);">
           <div class="sub-head" style="color:var(--chalk-green);">3. 氰化鉀 (KCN)</div>
           <div style="font-size:0.76rem; line-height:1.5;">
-            • <div class="hydro-align-line">
-              KCN = KOH + HCN<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-base">強鹼</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="txt-acid">弱酸</span>
-            </div>
+            • <table class="hydro-align-table">
+              <tr>
+                <td>KCN =</td>
+                <td>KOH</td>
+                <td>+</td>
+                <td>HCN</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><span class="txt-base">強鹼</span></td>
+                <td></td>
+                <td><span class="txt-acid">弱酸</span></td>
+              </tr>
+            </table><br>
             　故 CN<sup>-</sup> 顯 <span class="txt-base">鹼性</span><br>
             • 反應式：<br>
             <div style="background:rgba(0,0,0,0.3); padding:3px; border-radius:3px; font-family:monospace; margin-top:2px; color:var(--chalk-cyan); font-size:0.7rem;">
@@ -961,7 +1006,7 @@
                   <td style="text-align:left;"><span class="bond-long"></span>O<sup>-</sup></td>
                 </tr>
                 <tr><td></td><td>|</td><td></td></tr>
-                <tr><td></td><td>O<sup>-</sup></td><td></td></tr>
+                <tr><td></td><td><span class="o-minus-center">O<sup>-</sup></span></td><td></td></tr>
               </table>
             </div>
 
@@ -976,7 +1021,7 @@
                   <td style="text-align:left;"><span class="bond-long"></span>O<sup>-</sup></td>
                 </tr>
                 <tr><td></td><td>|</td><td></td></tr>
-                <tr><td></td><td>O<sup>-</sup></td><td></td></tr>
+                <tr><td></td><td><span class="o-minus-center">O<sup>-</sup></span></td><td></td></tr>
               </table>
             </div>
 
@@ -1041,7 +1086,7 @@
       <div>展氏新解 · 多元酸鹽的酸鹼性</div>
       <div class="footer-copyright">© 展氏新解 版權所有</div>
       <div style="font-size:0.78rem; opacity:0.85; margin-top:4px;">
-        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">646</span> 次
+        👀 累計點閱：<span id="pageViews" style="color:var(--chalk-yellow); font-weight:bold;">648</span> 次
       </div>
     </div>
 
